@@ -1,0 +1,383 @@
+html {
+	min-height:100%;
+}
+body {
+	
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#b22385+0,7db9e8+100&0.75+0,0.75+100 */
+	background: -moz-linear-gradient(-45deg, rgba(178,35,133,0.75) 0%, rgba(125,185,232,0.75) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(-45deg, rgba(178,35,133,0.75) 0%,rgba(125,185,232,0.75) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(135deg, rgba(178,35,133,0.75) 0%,rgba(125,185,232,0.75) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bfb22385', endColorstr='#bf7db9e8',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+	min-height: 100%;
+	margin:0;
+	padding:0;
+	font-family:'Roboto Mono', Agency FB;
+	position:relative;
+	font-size:12px;
+	box-sizing: border-box;
+
+}
+
+/*--------------------------------------  VERSION MOBILE  --------------------------------- */
+
+@media screen and (max-width:1000px) {
+	body {
+		width: auto;
+		margin: 0;
+		padding: 0;
+		content:"Version mobile du site";
+		display:block;
+	}
+	
+	header {
+		display:none;
+	}
+	.mobile {
+		display:none;
+	}
+}
+
+
+/*--------------------------------------  HEADER --------------------------------- */
+
+
+header {
+	margin-top:-150px;
+	padding: 0;
+	position: fixed;
+	background-color: rgba(0,0,0,0.5);
+	width:100%;
+	text-align: center;
+}
+
+nav a {
+	text-decoration:none;
+	color: black;
+	text-transform:uppercase;
+	margin:auto;
+	padding-top: 0.5rem;
+	font-size:0.9rem;
+	text-decoration: underline;
+	display:inline-block;
+	width: 15%;
+	color:white;
+}
+
+nav a:before {
+	content:"< ";
+}
+
+nav a:after {
+	content:" >";
+}
+
+
+header p {
+	padding:0;
+	margin:0;
+	padding-top: 0.5rem;
+	color : white;
+}
+
+header section {
+	font-weight: bold;
+	padding-left: 5px;
+	float:left;
+}
+
+
+/*--------------------------------------  MAIN --------------------------------- */
+
+main {
+	max-width: 1000px;
+	margin: 0 auto;
+}
+
+a{
+	text-decoration: none;
+	font-size:1.2rem;
+	color:black;
+}
+
+h1 {
+	color: black;
+	text-transform:uppercase;
+	text-align: center;
+	font-size: 1.5rem;
+	margin-top: 150px;
+	font-family: 'Righteous', cursive;	
+}
+
+h2 {
+	color: black;
+	text-transform:uppercase;
+	font-size: 1.2rem;
+	font-family: 'Righteous', cursive;
+	margin-left: auto;
+	margin-right : auto;
+	width:99%;
+	display: inline-block;
+	text-align:center;
+}
+
+h2:before {
+	content:"< ";
+}
+
+h2:after {
+	content:" >";
+}
+
+p{
+	font-size:1.2rem;
+	text-align:justify;
+}
+
+.box {
+	background-color: rgba(250, 250, 250, 0.3);
+	box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.5);
+	padding:50px;
+	margin: 50px;
+}
+
+/*--------------------------------------  FLIP CARD --------------------------------- */
+
+#f1_container {
+	position: relative;
+	margin: 10px auto;
+	width: 90%;
+	height: 350px;
+	z-index: 1;
+  }
+  #f1_container {
+	perspective: 1000;
+  }
+  #f1_card {
+	width: 100%;
+	height: 100%;
+	transform-style: preserve-3d;
+	transition: all 1.0s linear;
+  }
+  #f1_container:hover #f1_card {
+	transform: rotateY(180deg);
+  }
+  .face {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	backface-visibility: hidden;
+  }
+  .face img {
+	margin: 15px auto;
+	max-height: 90%;
+	display: block;
+  }
+  .face.back {
+	background-color:#c9add5;
+	display: block;
+	transform: rotateY(180deg);
+	box-sizing: border-box;
+	padding: 25px;
+	text-align: center;
+  }
+
+/*--------------------------------------  A PROPOS --------------------------------- */
+
+#Apropos {
+	
+	display:flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+
+#Apropos h2 {
+	flex-basis: 100%;
+}
+
+
+
+/*--------------------------------------  TECHNOLOGIES --------------------------------- */
+
+#Technologies {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+#Technologies > div {
+	display: flex;
+	justify-content: space-between;
+	margin: 25px auto;
+	flex-basis: 100%;
+}
+
+.circle {
+	width:50px;
+	height:50px;
+	border-radius :50px;
+	border: 6px solid rgba(178,35,133,0.33);
+	position:relative;
+	display:inline-block;
+	vertical-align: middle;
+  }
+  
+  section:hover .circle2:after {
+	content:"";
+	top:-6px;left:-6px;
+	width:50px;
+	height:50px;
+	border-radius :50px;
+	border: 6px solid transparent;
+	border-top-color :rgba(125,185,232,0.75);
+	border-right-color :rgba(125,185,232,0.75);
+	position:absolute;
+	display:inline-block;
+	vertical-align: middle;
+	animation : spin 0.5s linear;
+	-webkit-animation : spin 0.5s linear;
+  }
+  section:hover .circle3:after {
+	content:"";
+	top:-6px;left:-6px;
+	width:50px;
+	height:50px;
+	border-radius :50px;
+	border: 6px solid transparent;
+	border-top-color :rgba(125,185,232,0.75);
+	border-right-color :rgba(125,185,232,0.75);
+	border-bottom-color :rgba(125,185,232,0.75);
+	position:absolute;
+	display:inline-block;
+	vertical-align: middle;
+	animation : spin 0.5s linear;
+	-webkit-animation : spin 0.5s linear;
+  }
+  
+  @keyframes spin {
+	0%{ transform: rotate(0deg);}
+	100%{ transform: rotate(360deg);}
+  }
+  @-webkit-keyframes spin {
+	0%{ -webkit-transform: rotate(0deg);}
+	100%{ -webkit-transform: rotate(360deg);}
+  }
+
+/*--------------------------------------  PROJETS --------------------------------- */
+
+
+#projets {
+	width:15rem;
+	margin-top:20px;
+	margin-left:8rem;
+}
+
+
+
+/* --------------------------------------------- CARROUSEL ------------------------------------------------------- */
+
+.flexslider {
+	max-width: 60%;
+}
+
+.flex-caption {
+	margin: 20px auto;
+	width: 70%;
+	padding: 2%;
+	left: 0;
+	bottom: 0;
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+	color: #fff;
+	text-shadow: 0 -1px 0 rgba(0,0,0,.3);
+	font-size: 14px;
+	line-height: 18px;
+	text-align: center;
+}
+
+
+
+/*--------------------------------------  CONTACT --------------------------------- */
+
+ form {
+	color: black;
+	text-transform:uppercase;
+	text-decoration: underline;
+	text-align: center;
+	margin-left:auto;
+	margin-right:auto;
+	width :45%;
+	font-size:16px;
+}
+
+input, textarea {
+	margin:15px auto;
+}
+
+label {
+	left:-9999px;
+	position:absolute;	
+}
+
+button {
+	margin:0 auto;
+}
+
+button:hover {
+	background: -moz-linear-gradient(-45deg, rgba(178,35,133,0.75) 0%, rgba(125,185,232,0.75) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(-45deg, rgba(178,35,133,0.75) 0%,rgba(125,185,232,0.75) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(135deg, rgba(178,35,133,0.75) 0%,rgba(125,185,232,0.75) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bfb22385', endColorstr='#bf7db9e8',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+	border:none;
+} 
+
+/* ------------------------------------------------- RETOUR VERS LE HAUT ---------------------------------------------------------*/
+
+#go_top {
+	font-size: 25px;
+	color:#5F6A6A;
+	position:fixed;
+	right: 20px;
+	bottom:3.5rem;
+}
+
+
+/* ------------------------------------------------- CONFIRMATION ENVOI ---------------------------------------------------------*/
+
+.retour {
+	display: block;
+	max-width: 20%;
+	border:1px solid black;
+	cursor: pointer;
+	color: black;
+	text-transform:uppercase;
+	font-size:16px;
+	margin: 100px auto;
+	padding:10px;
+	text-align: center;
+}
+
+/* ------------------------------------------------- FOOTER ---------------------------------------------------------*/
+
+
+footer {
+	width:96%;
+	height:4rem;
+	bottom:0;
+	padding:1rem;
+	margin:25px;
+	margin-top: 10%;
+	background-color: rgba(0,0,0,0.5);
+	clear:left;
+	border-radius:4px;
+	text-align: center;
+	text-transform:uppercase;
+	font-size:0.8rem;
+}
+
+#footer_envoi {
+	position:fixed;
+}
+
+.logo {
+	width:1.2rem;
+}
