@@ -35,6 +35,17 @@ body {
 	.mobile {
 		display:none;
 	}
+	.back p, .back a {
+		font-size:0.8rem;
+	}
+	footer {
+		height: 100%;
+		display: flex;
+		flex-wrap: wrap;
+	}
+	footer a {
+		flex-basis: 100%;
+	}
 }
 
 
@@ -120,6 +131,13 @@ h2 {
 	text-align:center;
 }
 
+h3 {
+	color: black;
+	text-transform:uppercase;
+	font-size: 1.1rem;
+	font-family: 'Righteous', cursive;
+}
+
 h2:before {
 	content:"< ";
 }
@@ -170,6 +188,7 @@ p{
   .face img {
 	margin: 15px auto;
 	max-height: 90%;
+	max-width:90%;
 	display: block;
   }
   .face.back {
@@ -296,39 +315,7 @@ p{
 
 
 
-/*--------------------------------------  CONTACT --------------------------------- */
-
- form {
-	color: black;
-	text-transform:uppercase;
-	text-decoration: underline;
-	text-align: center;
-	margin-left:auto;
-	margin-right:auto;
-	width :45%;
-	font-size:16px;
-}
-
-input, textarea {
-	margin:15px auto;
-}
-
-label {
-	left:-9999px;
-	position:absolute;	
-}
-
-button {
-	margin:0 auto;
-}
-
-button:hover {
-	background: -moz-linear-gradient(-45deg, rgba(178,35,133,0.75) 0%, rgba(125,185,232,0.75) 100%); /* FF3.6-15 */
-	background: -webkit-linear-gradient(-45deg, rgba(178,35,133,0.75) 0%,rgba(125,185,232,0.75) 100%); /* Chrome10-25,Safari5.1-6 */
-	background: linear-gradient(135deg, rgba(178,35,133,0.75) 0%,rgba(125,185,232,0.75) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bfb22385', endColorstr='#bf7db9e8',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-	border:none;
-} 
+ 
 
 /* ------------------------------------------------- RETOUR VERS LE HAUT ---------------------------------------------------------*/
 
@@ -341,27 +328,13 @@ button:hover {
 }
 
 
-/* ------------------------------------------------- CONFIRMATION ENVOI ---------------------------------------------------------*/
 
-.retour {
-	display: block;
-	max-width: 20%;
-	border:1px solid black;
-	cursor: pointer;
-	color: black;
-	text-transform:uppercase;
-	font-size:16px;
-	margin: 100px auto;
-	padding:10px;
-	text-align: center;
-}
 
 /* ------------------------------------------------- FOOTER ---------------------------------------------------------*/
 
 
 footer {
 	width:96%;
-	height:4rem;
 	bottom:0;
 	padding:1rem;
 	margin:25px;
